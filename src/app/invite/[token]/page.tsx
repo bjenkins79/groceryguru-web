@@ -1,42 +1,62 @@
 import Image from 'next/image'
 
 export default function InvitePage({ params }: { params: { token: string } }) {
+  const joinUrl = `groceryguru://invite/${params.token}`
+  
   return (
-    <div className="bg-light-bg min-h-screen flex items-center justify-center p-5">
-      <div className="bg-secondary rounded-2xl shadow-lg p-10 text-center max-w-xs w-full">
+    <div className="bg-light-bg min-h-screen p-5">
+      {/* Header */}
+      <div className="bg-primary text-secondary text-center py-8 rounded-t-2xl">
+        <h1 className="text-2xl font-semibold">GroceryGuru</h1>
+        <p className="text-sm opacity-90">Smart lists made simple.</p>
+      </div>
+      
+      {/* Content */}
+      <div className="bg-secondary p-8 rounded-b-2xl shadow-lg">
+        <h2 className="text-2xl font-semibold text-primary mb-4">
+          You're invited to join!
+        </h2>
         
-        {/* App Icon */}
-        <div className="bg-primary-accent rounded-3xl p-5 inline-block mb-6">
-          <Image 
-            src="/images/appIcon_GroceryGuru.png"
-            alt="GroceryGuru" 
-            width={60} 
-            height={60}
-          />
+        <p className="text-primary mb-6">
+          Someone thought you'd find GroceryGuru helpful for managing grocery lists and staying organized.
+        </p>
+        
+        {/* Two Options Box */}
+        <div className="bg-primary-accent/10 border-2 border-primary-accent rounded-xl p-6 mb-6">
+          <h3 className="text-lg font-semibold text-primary mb-4 text-center">
+            Two ways to join:
+          </h3>
+          
+          <div className="mb-6">
+            <p className="text-primary font-medium mb-3">
+              Option 1: Tap the button below (will open app if installed)
+            </p>
+            <a 
+              href={joinUrl}
+              className="bg-primary-accent text-primary block text-center py-4 px-6 rounded-lg font-semibold text-lg"
+            >
+              Join Account
+            </a>
+          </div>
+          
+          <div>
+            <p className="text-primary font-medium mb-3">
+              Option 2: Enter this invite code in the app
+            </p>
+            <div className="bg-secondary border-2 border-primary-accent rounded-lg p-4 text-center">
+              <span className="text-2xl font-bold text-primary tracking-widest">
+                {params.token.toUpperCase()}
+              </span>
+            </div>
+          </div>
         </div>
-
-        {/* Title */}
-        <h1 className="text-2xl font-semibold text-primary mb-4 leading-tight">
-          GroceryGuru Required
-        </h1>
-
-        {/* Message */}
-        <p className="text-base text-primary mb-8 leading-relaxed">
-          This grocery list invitation requires the GroceryGuru app.
-        </p>
-
-        {/* Download Button */}
-        <a 
-          href="https://apps.apple.com/app/groceryguru/YOUR_APP_ID"
-          className="bg-primary text-secondary block text-lg font-semibold py-4 px-6 rounded-xl no-underline text-center shadow-lg mb-4 hover:opacity-90"
-        >
-          Download from App Store
-        </a>
-
-        {/* Token reference (small) */}
-        <p className="text-xs text-completed font-mono">
-          {params.token}
-        </p>
+        
+        {/* Download note */}
+        <div className="bg-tertiary-accent/20 border-l-4 border-tertiary-accent p-4 rounded">
+          <p className="text-primary text-sm">
+            📱 <strong>New to GroceryGuru?</strong> Download the app from the App Store first, then use either option above to join.
+          </p>
+        </div>
       </div>
     </div>
   )
