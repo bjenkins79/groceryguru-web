@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light mode colors */
+  --color-primary: #293D2E;
+  --color-secondary: #FFFFFF;
+  --color-tertiary: #2A3D2E;
+  --color-light-background: #EAEAE5;
+  --color-dark-background: #5C766E;
+  --color-primary-accent: #FFBE72;
+  --color-secondary-accent: #6BA3A2;
+  --color-tertiary-accent: #FFB737;
+  --color-error: #B03030;
+  --color-completed: #6D6D6D;
+  --color-good: #81A784;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Dark mode colors */
+    --color-primary: #BCC9C0;
+    --color-secondary: #3A4A3E;
+    --color-tertiary: #7E8E82;
+    --color-light-background: #2A2F2A;
+    --color-dark-background: #406158;
+    --color-primary-accent: #CC944C;
+    --color-secondary-accent: #617D7A;
+    --color-tertiary-accent: #CC9A2E;
+    --color-error: #CC4D4D;
+    --color-completed: #B3B3B3;
+    --color-good: #7DBE8B;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  background-color: var(--color-light-background);
+  color: var(--color-primary);
 }
