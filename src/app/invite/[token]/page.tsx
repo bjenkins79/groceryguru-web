@@ -2,39 +2,40 @@ import Image from 'next/image'
 
 export default function InvitePage({ params }: { params: { token: string } }) {
   return (
-    <div className="min-h-screen bg-light-bg">
-      {/* Header bar with your branding */}
-      <div className="bg-primary-accent px-6 py-4 flex items-center">
-        <Image 
-          src="/images/appIcon_GroceryGuru.png" 
-          alt="GroceryGuru" 
-          width={40} 
-          height={40}
-          className="mr-3"
-        />
-        <h1 className="text-primary text-2xl font-bold">
-          GroceryGuru
-        </h1>
-      </div>
-      
-      {/* Content */}
-      <div className="px-6 py-8">
-        <h2 className="text-primary text-xl font-semibold mb-4">
-          You've been invited to join a grocery list!
-        </h2>
+    <div className="bg-light-bg min-h-screen flex items-center justify-center p-5">
+      <div className="bg-secondary rounded-2xl shadow-lg p-10 text-center max-w-xs w-full">
         
-        <div className="bg-secondary rounded-lg p-4 mb-6 border border-dark-bg/20">
-          <p className="text-primary text-sm">
-            Invite Token: <span className="font-mono text-secondary-accent">{params.token}</span>
-          </p>
+        {/* App Icon */}
+        <div className="bg-primary-accent rounded-3xl p-5 inline-block mb-6">
+          <Image 
+            src="/images/appIcon_GroceryGuru.png"
+            alt="GroceryGuru" 
+            width={60} 
+            height={60}
+          />
         </div>
-        
-        <p className="text-primary mb-4">
-          If you have the GroceryGuru app installed, it should have opened automatically.
+
+        {/* Title */}
+        <h1 className="text-2xl font-semibold text-primary mb-4 leading-tight">
+          GroceryGuru Required
+        </h1>
+
+        {/* Message */}
+        <p className="text-base text-primary mb-8 leading-relaxed">
+          This grocery list invitation requires the GroceryGuru app.
         </p>
-        
-        <p className="text-primary/70 text-sm">
-          Don't have the app? Download it from the App Store.
+
+        {/* Download Button */}
+        <a 
+          href="https://apps.apple.com/app/groceryguru/YOUR_APP_ID"
+          className="bg-primary text-secondary block text-lg font-semibold py-4 px-6 rounded-xl no-underline text-center shadow-lg mb-4 hover:opacity-90"
+        >
+          Download from App Store
+        </a>
+
+        {/* Token reference (small) */}
+        <p className="text-xs text-completed font-mono">
+          {params.token}
         </p>
       </div>
     </div>
