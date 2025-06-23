@@ -22,17 +22,14 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const html = render(
-    React.createElement(InviteEmail, {
-      invite_code,
-      user_email,
-      inviter_name,
-    }),
-    {
-      pretty: true,
-      plainText: false,
-    }
-  );  
+  const html = await render(React.createElement(InviteEmail, {
+    invite_code,
+    user_email,
+    inviter_name,
+  }), {
+    pretty: true,
+    plainText: false
+  });
 
   // Optional support for previewing raw HTML via format=json
   if (format === "json") {
