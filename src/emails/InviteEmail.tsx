@@ -119,32 +119,36 @@ import {
                 </Link>
               </Section>
   
-              <Text
-                style={{
-                  fontSize: "14px",
-                  lineHeight: "22px",
-                  color: "#2A3D2E",
-                  marginTop: "24px",
-                }}
-              >
-                Or open the app and enter this code:
-              </Text>
-  
-              <Text
-                style={{
-                  fontSize: "24px",
-                  fontWeight: "bold",
-                  letterSpacing: "4px",
-                  background: "#FFFFFF",
-                  border: "2px solid #FFBE72", // var(--color-primary-accent)
-                  padding: "12px 20px",
-                  textAlign: "center",
-                  display: "inline-block",
-                  borderRadius: "8px",
-                }}
-              >
-                {invite_code}
-              </Text>
+                <div style={{ textAlign: "center" }}>
+    <Text
+        style={{
+        fontSize: "14px",
+        lineHeight: "22px",
+        color: "#2A3D2E",
+        marginTop: "24px",
+        marginBottom: "16px",
+        }}
+    >
+        Or open the app and enter this code:
+    </Text>
+
+    <Text
+        style={{
+        fontSize: "24px",
+        fontWeight: "bold",
+        letterSpacing: "4px",
+        background: "#FFFFFF",
+        border: "2px solid #FFBE72",
+        padding: "12px 20px",
+        textAlign: "center",
+        display: "inline-block",
+        borderRadius: "8px",
+        }}
+    >
+        {invite_code}
+    </Text>
+    </div>
+
             </Section>
   
             {/* Footer */}
