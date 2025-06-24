@@ -1,5 +1,4 @@
-// app/reset/[sessionID]/page.tsx
-
+// reset/[session]/page.tsx
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -8,25 +7,21 @@ export const metadata: Metadata = {
 }
 
 export default function ResetPage({ params }: { params: { session: string } }) {
-    const resetCode = decodeURIComponent(params.session).toUpperCase()
+  const resetCode = params.session.toUpperCase()
 
   return (
     <div className="bg-light-bg min-h-screen p-5">
-{/* Header */}
-<div className="bg-primary-accent text-primary text-center py-10 rounded-t-2xl">
-  <img
-    src="https://gg-email-renderer.vercel.app/googleIcon_GroceryGuru_320x132.png"
-    alt="GroceryGuru"
-    className="mx-auto mb-2"
-    width={160}
-    height={66}
-  />
-  <h1 className="text-2xl font-semibold">GroceryGuru</h1>
-  <p className="text-sm opacity-90">Smart lists made simple.</p>
-</div>
+      {/* Header */}
+      <div className="bg-primary-accent text-secondary text-center py-8 rounded-t-2xl">
+        <img
+          src="https://gg-email-renderer.vercel.app/googleIcon_GroceryGuru_320x132.png"
+          alt="GroceryGuru"
+          className="mx-auto w-40 h-auto"
+        />
+      </div>
 
       {/* Content */}
-      <div className="bg-secondary p-8 rounded-b-2xl shadow-lg">
+      <div className="bg-secondary p-8 rounded-b-2xl shadow-lg max-w-screen-sm mx-auto">
         <h2 className="text-2xl font-semibold text-primary mb-4">
           Reset your password
         </h2>
@@ -35,11 +30,11 @@ export default function ResetPage({ params }: { params: { session: string } }) {
           If the app didn’t open, copy the code below and enter it manually in the GroceryGuru app to continue.
         </p>
 
-        <div className="bg-secondary border-2 border-primary-accent rounded-lg p-4 text-center mt-4">
-  <span className="text-2xl font-bold text-primary tracking-widest">
-    {resetCode}
-  </span>
-</div>
+        <div className="bg-secondary border-2 border-primary rounded-lg p-4 text-center">
+          <span className="text-2xl font-bold text-primary tracking-widest">
+            {resetCode}
+          </span>
+        </div>
 
         <p className="text-sm text-primary opacity-80 text-center mt-6">
           This code will expire in one hour. Make sure the app is installed first.
