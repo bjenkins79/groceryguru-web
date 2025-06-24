@@ -1,4 +1,36 @@
+// app/invite/[code]/page.tsx
+
 import Image from 'next/image'
+
+import type { Metadata } from 'next'
+
+export async function generateMetadata({ params }: { params: { code: string } }): Promise<Metadata> {
+  return {
+    title: "You've been invited to GroceryGuru",
+    description: "Smart lists made simple. Accept your invite and get started with GroceryGuru.",
+    openGraph: {
+      title: "You've been invited to GroceryGuru",
+      description: "Smart lists made simple. Accept your invite and get started with GroceryGuru.",
+      url: `https://links.getgroceryguru.com/invite/${params.code}`,
+      siteName: "GroceryGuru",
+      images: [
+        {
+          url: "https://links.getgroceryguru.com/googleIcon_GroceryGuru_320x132.png",
+          width: 320,
+          height: 132,
+          alt: "GroceryGuru Logo",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "You've been invited to GroceryGuru",
+      description: "Smart lists made simple. Accept your invite and get started.",
+      images: ["https://getgroceryguru.com/og/groceryguru-invite.png"],
+    },
+  };
+}
 
 export default function InvitePage({ params }: { params: { token: string } }) {
   const joinUrl = `groceryguru://invite/${params.token}`
