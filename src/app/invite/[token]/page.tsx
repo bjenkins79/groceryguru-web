@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: { code: string } })
 
 export default function InvitePage({ params }: { params: { token: string } }) {
   const joinUrl = `groceryguru://invite/${params.token}`
-  
+
   return (
     <div className="bg-light-bg min-h-screen p-5">
       {/* Header */}
@@ -42,35 +42,34 @@ export default function InvitePage({ params }: { params: { token: string } }) {
         <h1 className="text-2xl font-semibold">GroceryGuru</h1>
         <p className="text-sm opacity-90">Smart lists made simple.</p>
       </div>
-      
+
       {/* Content */}
       <div className="bg-secondary p-8 rounded-b-2xl shadow-lg">
         <h2 className="text-2xl font-semibold text-primary mb-4">
-          You're invited to join!
+          You've been invited to join!
         </h2>
-        
+
         <p className="text-primary mb-6">
-          Someone thought you'd find GroceryGuru helpful for managing grocery lists and staying organized.
+          To continue, make sure the app is installed on your iPhone.
         </p>
-        
-        {/* Two Options Box */}
+
         <div className="bg-primary-accent/10 border-2 border-primary-accent rounded-xl p-6 mb-6">
           <h3 className="text-lg font-semibold text-primary mb-4 text-center">
             Two ways to join:
           </h3>
-          
+
           <div className="mb-6">
             <p className="text-primary font-medium mb-3">
-              Option 1: Tap the button below (will open app if installed)
+              Option 1: Tap the button below
             </p>
-            <a 
+            <a
               href={joinUrl}
               className="bg-primary-accent text-primary block text-center py-4 px-6 rounded-lg font-semibold text-lg"
             >
               Join Account
             </a>
           </div>
-          
+
           <div>
             <p className="text-primary font-medium mb-3">
               Option 2: Enter this invite code in the app
@@ -82,13 +81,10 @@ export default function InvitePage({ params }: { params: { token: string } }) {
             </div>
           </div>
         </div>
-        
-        {/* Download note */}
-        <div className="bg-tertiary-accent/20 border-l-4 border-tertiary-accent p-4 rounded">
-          <p className="text-primary text-sm">
-            📱 <strong>New to GroceryGuru?</strong> Download the app from the App Store first, then use either option above to join.
-          </p>
-        </div>
+
+        <p className="text-sm text-primary opacity-80 text-center">
+          If this screen doesn’t open in the app, return to your iPhone and try again.
+        </p>
       </div>
     </div>
   )
