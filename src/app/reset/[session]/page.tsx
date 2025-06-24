@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   description: 'Use this code to reset your GroceryGuru password in the app.',
 }
 
-export default function ResetPage({ params }: { params: { sessionID: string } }) {
+export default function ResetPage({ params }: { params: { session: string } }) {
+    const resetCode = decodeURIComponent(params.session).toUpperCase()
+
   return (
     <div className="bg-light-bg min-h-screen p-5">
       {/* Header */}
@@ -23,22 +25,19 @@ export default function ResetPage({ params }: { params: { sessionID: string } })
         </h2>
 
         <p className="text-primary mb-6">
-          We couldn't open the app automatically. No worries —
-          just copy the code below and paste it into the GroceryGuru app.
+          If the app didn’t open, copy the code below and enter it manually in the GroceryGuru app to continue.
         </p>
 
         <div className="bg-secondary border-2 border-primary-accent rounded-lg p-4 text-center">
           <span className="text-2xl font-bold text-primary tracking-widest">
-            {params.sessionID.toUpperCase()}
+            {resetCode}
           </span>
         </div>
 
-        <div className="bg-tertiary-accent/20 border-l-4 border-tertiary-accent p-4 rounded mt-6">
-          <p className="text-primary text-sm">
-            📱 <strong>Make sure the app is installed</strong> on your iPhone before entering this code.
-          </p>
-        </div>
+        <p className="text-sm text-primary opacity-80 text-center mt-6">
+          This code will expire in one hour. Make sure the app is installed first.
+        </p>
       </div>
     </div>
-  );
+  )
 }
