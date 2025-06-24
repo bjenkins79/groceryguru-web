@@ -23,18 +23,19 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
     <Html>
       <Head />
       <Preview>Reset your GroceryGuru password</Preview>
+
       <Body
         style={{
-          backgroundColor: "#EAEAE5", // var(--color-light-background)
+          backgroundColor: "#EAEAE5",
           fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
           margin: "0",
           padding: "40px 20px",
-          color: "#293D2E", // var(--color-primary)
+          color: "#293D2E",
         }}
       >
         <Container
           style={{
-            backgroundColor: "#FFFFFF", // var(--color-secondary)
+            backgroundColor: "#FFFFFF",
             borderRadius: "12px",
             boxShadow: "0 4px 12px rgba(47, 79, 63, 0.1)",
             margin: "0 auto",
@@ -45,7 +46,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
           {/* Header */}
           <Section
             style={{
-              backgroundColor: "#FFBE72", // var(--color-primary-accent)
+              backgroundColor: "#FFBE72",
               padding: "32px 40px",
               textAlign: "center",
             }}
@@ -65,7 +66,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
               style={{
                 fontSize: "24px",
                 fontWeight: "600",
-                color: "#2A3D2E", // var(--color-tertiary)
+                color: "#2A3D2E",
                 marginBottom: "16px",
                 textAlign: "center",
               }}
@@ -81,8 +82,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
                 margin: "16px 0",
               }}
             >
-              A password reset was requested for{" "}
-              <strong>{email}</strong>.
+              A password reset was requested for <strong>{email}</strong>.
             </Text>
 
             <Text
@@ -100,9 +100,9 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
               <Link
                 href={resetUrl}
                 style={{
-                  backgroundColor: "#293D2E", // var(--color-primary)
+                  backgroundColor: "#293D2E",
                   borderRadius: "8px",
-                  color: "#FFFFFF", // var(--color-secondary)
+                  color: "#FFFFFF",
                   display: "inline-block",
                   fontSize: "16px",
                   fontWeight: "600",
@@ -116,47 +116,49 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
               </Link>
             </Section>
 
-            <div style={{ textAlign: "center" }}>
+            <Section style={{ textAlign: "center", marginBottom: "16px" }}>
+              {/* ✅ Moved expiration message here */}
+              <Text
+                style={{
+                  fontSize: "14px",
+                  lineHeight: "22px",
+                  color: "#6D6D6D",
+                  marginBottom: "24px",
+                }}
+              >
+                This code will expire in one hour.
+              </Text>
+
               <Text
                 style={{
                   fontSize: "14px",
                   lineHeight: "22px",
                   color: "#2A3D2E",
-                  marginTop: "24px",
                   marginBottom: "16px",
                 }}
               >
                 Or open the app and enter this code:
               </Text>
 
+              {/* ✅ Formatted fallback code block */}
               <Text
                 style={{
-                  fontSize: "24px",
+                  fontSize: "20px",
                   fontWeight: "bold",
-                  letterSpacing: "4px",
-                  background: "#FFFFFF",
-                  border: "2px solid #FFBE72", // accent border
-                  padding: "12px 20px",
+                  letterSpacing: "1.5px",
+                  wordBreak: "break-word",
                   textAlign: "center",
+                  background: "#FFFFFF",
+                  border: "2px solid #FFBE72",
+                  padding: "12px 20px",
                   display: "inline-block",
                   borderRadius: "8px",
+                  maxWidth: "90%",
                 }}
               >
                 {session_id}
               </Text>
-            </div>
-
-            <Text
-              style={{
-                fontSize: "14px",
-                lineHeight: "24px",
-                color: "#6D6D6D", // var(--color-completed)
-                marginTop: "24px",
-                textAlign: "center",
-              }}
-            >
-              This code will expire in one hour.
-            </Text>
+            </Section>
           </Section>
 
           {/* Footer */}
@@ -165,7 +167,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
               backgroundColor: "#F8F9FA",
               padding: "24px 40px",
               textAlign: "center",
-              borderTop: "1px solid rgba(255, 190, 114, 0.2)", // translucent accent
+              borderTop: "1px solid rgba(255, 190, 114, 0.2)",
             }}
           >
             <Text
