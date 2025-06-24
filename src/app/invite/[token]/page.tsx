@@ -15,9 +15,9 @@ export async function generateMetadata({ params }: { params: { code: string } })
       siteName: "GroceryGuru",
       images: [
         {
-          url: "https://links.getgroceryguru.com/googleIcon_GroceryGuru_320x132.png",
-          width: 320,
-          height: 132,
+          url: "https://links.getgroceryguru.com/images/social-preview.png",
+          width: 1200,
+          height: 630,
           alt: "GroceryGuru Logo",
         },
       ],
