@@ -37,11 +37,18 @@ export default function InvitePage({ params }: { params: { token: string } }) {
 
   return (
     <div className="bg-light-bg min-h-screen p-5">
-      {/* Header */}
-      <div className="bg-primary text-secondary text-center py-8 rounded-t-2xl">
-        <h1 className="text-2xl font-semibold">GroceryGuru</h1>
-        <p className="text-sm opacity-90">Smart lists made simple.</p>
-      </div>
+{/* Header */}
+<div className="bg-primary-accent text-primary text-center py-10 rounded-t-2xl">
+  <img
+    src="https://gg-email-renderer.vercel.app/googleIcon_GroceryGuru_320x132.png"
+    alt="GroceryGuru"
+    className="mx-auto mb-2"
+    width={160}
+    height={66}
+  />
+  <h1 className="text-2xl font-semibold">GroceryGuru</h1>
+  <p className="text-sm opacity-90">Smart lists made simple.</p>
+</div>
 
       {/* Content */}
       <div className="bg-secondary p-8 rounded-b-2xl shadow-lg">
@@ -74,8 +81,8 @@ export default function InvitePage({ params }: { params: { token: string } }) {
             <p className="text-primary font-medium mb-3">
               Option 2: Enter this invite code in the app
             </p>
-            <div className="bg-secondary border-2 border-primary-accent rounded-lg p-4 text-center">
-              <span className="text-2xl font-bold text-primary tracking-widest">
+            <div className="bg-light-bg border-2 border-primary-accent rounded-lg p-4 text-center">
+            <span className="text-2xl font-bold text-primary tracking-widest">
                 {params.token.toUpperCase()}
               </span>
             </div>
