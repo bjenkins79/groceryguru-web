@@ -13,11 +13,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { email, session_id, format } = await req.json();
+  const { email, reset_code, format } = await req.json();
 
-  if (!email || !session_id) {
+  if (!email || !reset_code) {
     return NextResponse.json(
-      { error: "Missing email or session_id" },
+      { error: "Missing email or reset_code" },
       { status: 400 }
     );
   }
@@ -25,11 +25,11 @@ export async function POST(req: NextRequest) {
   const html = await render(
     React.createElement(ResetPasswordEmail, {
       email,
-      session_id,
+      reset_code
     }),
     {
       pretty: true,
-      plainText: false,
+      plainText: false
     }
   );
 
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
   return new Response(String(html), {
     status: 200,
     headers: {
-      "Content-Type": "text/html",
-    },
+      "Content-Type": "text/html"
+    }
   });
 }

@@ -7,17 +7,17 @@ import {
   Section,
   Text,
   Img,
-  Link,
+  Link
 } from "@react-email/components";
 import * as React from "react";
 
 type Props = {
   email: string;
-  session_id: string;
+  reset_code: string;
 };
 
-const ResetPasswordEmail = ({ email, session_id }: Props) => {
-  const resetUrl = `https://links.getgroceryguru.com/reset/${session_id}`;
+const ResetPasswordEmail = ({ email, reset_code }: Props) => {
+  const resetUrl = `https://links.getgroceryguru.com/reset/${reset_code}`;
 
   return (
     <Html>
@@ -30,7 +30,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
           fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
           margin: "0",
           padding: "40px 20px",
-          color: "#293D2E",
+          color: "#293D2E"
         }}
       >
         <Container
@@ -40,7 +40,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
             boxShadow: "0 4px 12px rgba(47, 79, 63, 0.1)",
             margin: "0 auto",
             maxWidth: "600px",
-            overflow: "hidden",
+            overflow: "hidden"
           }}
         >
           {/* Header */}
@@ -48,7 +48,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
             style={{
               backgroundColor: "#FFBE72",
               padding: "32px 40px",
-              textAlign: "center",
+              textAlign: "center"
             }}
           >
             <Img
@@ -68,7 +68,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
                 fontWeight: "600",
                 color: "#2A3D2E",
                 marginBottom: "16px",
-                textAlign: "center",
+                textAlign: "center"
               }}
             >
               Reset your password
@@ -79,7 +79,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
                 fontSize: "16px",
                 lineHeight: "24px",
                 color: "#2A3D2E",
-                margin: "16px 0",
+                margin: "16px 0"
               }}
             >
               A password reset was requested for <strong>{email}</strong>.
@@ -90,7 +90,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
                 fontSize: "16px",
                 lineHeight: "24px",
                 color: "#2A3D2E",
-                margin: "16px 0",
+                margin: "16px 0"
               }}
             >
               Tap the button below to continue. If the app is not installed, you’ll be directed to the App Store first.
@@ -109,7 +109,7 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
                   lineHeight: "20px",
                   padding: "16px 32px",
                   textDecoration: "none",
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 Reset Password
@@ -117,13 +117,12 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
             </Section>
 
             <Section style={{ textAlign: "center", marginBottom: "16px" }}>
-              {/* ✅ Moved expiration message here */}
               <Text
                 style={{
                   fontSize: "14px",
                   lineHeight: "22px",
                   color: "#6D6D6D",
-                  marginBottom: "24px",
+                  marginBottom: "24px"
                 }}
               >
                 This code will expire in one hour.
@@ -134,13 +133,12 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
                   fontSize: "14px",
                   lineHeight: "22px",
                   color: "#2A3D2E",
-                  marginBottom: "16px",
+                  marginBottom: "16px"
                 }}
               >
                 Or open the app and enter this code:
               </Text>
 
-              {/* ✅ Formatted fallback code block */}
               <Text
                 style={{
                   fontSize: "20px",
@@ -153,10 +151,10 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
                   padding: "12px 20px",
                   display: "inline-block",
                   borderRadius: "8px",
-                  maxWidth: "90%",
+                  maxWidth: "90%"
                 }}
               >
-                {session_id}
+                {reset_code}
               </Text>
             </Section>
           </Section>
@@ -167,14 +165,14 @@ const ResetPasswordEmail = ({ email, session_id }: Props) => {
               backgroundColor: "#F8F9FA",
               padding: "24px 40px",
               textAlign: "center",
-              borderTop: "1px solid rgba(255, 190, 114, 0.2)",
+              borderTop: "1px solid rgba(255, 190, 114, 0.2)"
             }}
           >
             <Text
               style={{
                 fontSize: "14px",
                 color: "#6D6D6D",
-                margin: "0",
+                margin: "0"
               }}
             >
               © 2025 GroceryGuru. Smart lists made simple.
