@@ -2,40 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   /* Light mode colors */
-  --color-primary: #293D2E;
-  --color-secondary: #FFFFFF;
-  --color-tertiary: #2A3D2E;
-  --color-light-background: #EAEAE5;
-  --color-dark-background: #5C766E;
-  --color-primary-accent: #FFBE72;
-  --color-secondary-accent: #6BA3A2;
-  --color-tertiary-accent: #FFB737;
-  --color-error: #B03030;
-  --color-completed: #6D6D6D;
-  --color-good: #81A784;
+  --color-primary: #293d2e;
+  --color-secondary: #ffffff;
+  --color-tertiary: #2a3d2e;
+  --color-light-background: #eaeae5;
+  --color-dark-background: #5c766e;
+  --color-primary-accent: #ffbe72;
+  --color-secondary-accent: #6ba3a2;
+  --color-tertiary-accent: #ffb737;
+  --color-error: #b03030;
+  --color-completed: #6d6d6d;
+  --color-good: #81a784;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark mode colors */
-    --color-primary: #BCC9C0;
-    --color-secondary: #3A4A3E;
-    --color-tertiary: #7E8E82;
-    --color-light-background: #2A2F2A;
+    --color-primary: #bcc9c0;
+    --color-secondary: #3a4a3e;
+    --color-tertiary: #7e8e82;
+    --color-light-background: #2a2f2a;
     --color-dark-background: #406158;
-    --color-primary-accent: #CC944C;
-    --color-secondary-accent: #617D7A;
-    --color-tertiary-accent: #CC9A2E;
-    --color-error: #CC4D4D;
-    --color-completed: #B3B3B3;
-    --color-good: #7DBE8B;
+    --color-primary-accent: #cc944c;
+    --color-secondary-accent: #617d7a;
+    --color-tertiary-accent: #cc9a2e;
+    --color-error: #cc4d4d;
+    --color-completed: #b3b3b3;
+    --color-good: #7dbe8b;
   }
 }
 
 body {
   background-color: var(--color-light-background);
   color: var(--color-primary);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Premium typography scale */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+/* Refined interactions - subtle scale instead of heavy shadows */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: transform, opacity, background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-accent);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-accent);
 }
