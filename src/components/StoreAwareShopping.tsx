@@ -44,7 +44,7 @@ export default function StoreAwareShopping() {
           <div className="lg:col-span-7">
             <div className="relative">
               {/* Clean, straight phone mockups - no gimmicky angles */}
-              <div className="flex justify-center space-x-6">
+              <div className="flex flex-col md:flex-row justify-center md:space-x-6 space-y-6 md:space-y-0">
               <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
               <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                           <img
