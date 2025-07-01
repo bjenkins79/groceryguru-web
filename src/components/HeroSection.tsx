@@ -47,7 +47,7 @@ export default function HeroSection() {
               <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                     <img
-                      src="/images/GG_Screenshot_ListView.png"
+                      src="/images/GG_ScreenShot_ListView.png"
                       alt="List view"
                       className="w-full h-full object-cover"
                     />
