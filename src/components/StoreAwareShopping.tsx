@@ -9,7 +9,7 @@ export default function StoreAwareShopping() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-primary)] mb-6">
               Store-Aware
               <br />
-              <span className="text-lg-[var(--color-secondary-accent)]">Shopping</span>
+              <span className="text-lg text-[var(--color-secondary-accent)]">Shopping</span>
             </h2>
 
             <p className="text-lg text-[var(--color-primary)] opacity-80 mb-8 leading-relaxed">
@@ -42,41 +42,38 @@ export default function StoreAwareShopping() {
 
           {/* Right - Store filtering demonstration */}
           <div className="lg:col-span-7">
-            <div className="relative">
-              {/* Clean, straight phone mockups - no gimmicky angles */}
-              <div className="flex flex-col md:flex-row justify-center md:space-x-6 space-y-6 md:space-y-0">
-              <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
-              <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                          <img
-              src="/images/GG_Screenshot_StoreView_StoreItems.png"
-              alt="Costco filtered view"
-              className="w-full h-full object-cover"
-            />
-
-                  </div>
-                </div>
-
+            <div className="flex flex-col md:flex-row justify-center md:space-x-6 space-y-8 md:space-y-0">
+              {/* Store view - store items with label */}
+              <div className="flex flex-col items-center">
                 <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
-                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                <img
-  src="/images/GG_Screenshot_StoreView_AllItems.png"
-  alt="All items view"
-  className="w-full h-full object-cover"
-/>
+                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                    <img
+                      src="/images/GG_Screenshot_StoreView_StoreItems.png"
+                      alt="Costco filtered view"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
+                <span className="mt-3 text-center text-sm font-medium text-[var(--color-primary)] opacity-70">
+                  Costco Only
+                </span>
               </div>
 
-{/* Store labels - each below their phone */}
-<div className="mt-4 flex flex-col md:flex-row justify-center md:space-x-6 space-y-6 md:space-y-0">
-  <span className="w-72 text-center text-sm font-medium text-[var(--color-primary)] opacity-70">
-    Costco Only
-  </span>
-  <span className="w-72 text-center text-sm font-medium text-[var(--color-primary)] opacity-70">
-    All Items
-  </span>
-</div>
-
+              {/* Store view - all items with label */}
+              <div className="flex flex-col items-center">
+                <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                    <img
+                      src="/images/GG_Screenshot_StoreView_AllItems.png"
+                      alt="All items view"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <span className="mt-3 text-center text-sm font-medium text-[var(--color-primary)] opacity-70">
+                  All Items
+                </span>
+              </div>
             </div>
           </div>
         </div>
