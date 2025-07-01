@@ -67,8 +67,8 @@ export default function StoreAwareShopping() {
                 </div>
               </div>
 
-{/* Store labels - individually centered */}
-<div className="absolute -bottom-8 left-0 w-full flex justify-center space-x-6">
+{/* Store labels - each below their phone */}
+<div className="mt-4 flex flex-col md:flex-row justify-center md:space-x-6 space-y-6 md:space-y-0">
   <span className="w-72 text-center text-sm font-medium text-[var(--color-primary)] opacity-70">
     Costco Only
   </span>
