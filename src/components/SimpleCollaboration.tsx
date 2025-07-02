@@ -9,7 +9,7 @@ export default function SimpleCollaboration() {
 
         <p className="text-lg text-[var(--color-primary)] opacity-80 mb-12 max-w-2xl mx-auto">
           Share lists with family and friends. Everyone can add items and see updates in real time. No complicated
-          permissions - just collaboration that works.
+          permissions - collaboration that just works.
         </p>
 
         {/* Clean, minimal visual treatment */}
