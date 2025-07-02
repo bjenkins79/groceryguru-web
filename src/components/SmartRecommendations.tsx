@@ -11,8 +11,7 @@ export default function SmartRecommendations() {
             <span className="text-[var(--color-secondary-accent)]">That Learn Your Patterns</span>
           </h2>
           <p className="text-lg md:text-xl text-[var(--color-primary)] opacity-80 max-w-3xl mx-auto leading-relaxed">
-            GroceryGuru notices when you typically buy items and suggests what you might need based on your real
-            shopping habits.
+            GroceryGuru notices when you typically buy items and suggests what you might need based on your shopping habits.
           </p>
         </div>
 
@@ -52,40 +51,25 @@ export default function SmartRecommendations() {
           {/* Right - Feature details */}
           <div className="lg:col-span-5 order-1 lg:order-2">
             <div className="space-y-10">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-[var(--color-primary-accent)] rounded-full flex items-center justify-center">
-                    <span className="text-[var(--color-primary)] font-bold text-base">1</span>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-[var(--color-primary)]">Pattern Recognition</h3>
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-[var(--color-primary-accent)] rounded-full flex items-center justify-center">
+                  <span className="text-[var(--color-primary)] font-bold text-base">1</span>
                 </div>
-                <p className="text-lg text-[var(--color-primary)] opacity-80 ml-11">
-                  See "Unsalted Butter - Every 7 days - 85% confidence" based on your actual purchase history.
-                </p>
+                <h3 className="text-2xl font-semibold text-[var(--color-primary)]">Built Around Your Habits</h3>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-[var(--color-secondary-accent)] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-base">2</span>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-[var(--color-primary)]">Reliable Timing</h3>
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-[var(--color-secondary-accent)] rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-base">2</span>
                 </div>
-                <p className="text-lg text-[var(--color-primary)] opacity-80 ml-11">
-                  "Paper Towels - Every 18 days - Reliable Match" helps you never run out of essentials.
-                </p>
+                <h3 className="text-2xl font-semibold text-[var(--color-primary)]">Timely Suggestions</h3>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-[var(--color-good)] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-base">3</span>
-                  </div>
-                  <h3 className="text-2xl font-semibold text-[var(--color-primary)]">No Complexity</h3>
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-[var(--color-good)] rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-base">3</span>
                 </div>
-                <p className="text-lg text-[var(--color-primary)] opacity-80 ml-11">
-                  No meal planning, no budget tracking - just intelligent lists that understand your household.
-                </p>
+                <h3 className="text-2xl font-semibold text-[var(--color-primary)]">Designed for Simplicity</h3>
               </div>
             </div>
           </div>
