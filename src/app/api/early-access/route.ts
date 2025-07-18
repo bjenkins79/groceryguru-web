@@ -16,7 +16,13 @@ export async function POST(request: Request) {
     }
 
     // Step 1: Insert into `early_access_requests` table
-    const { error: insertError } = await supabase.from("early_access_requests").insert({ name, email })
+    const { error: insertError } = await supabase.from("early_access_requests").insert({
+      name,
+      email,
+      invited: false,   // must explicitly set
+      converted: false, // must explicitly set
+    })
+    
     if (insertError) {
       console.error("Supabase insert error:", insertError)
       return NextResponse.json({ success: false, error: "Database insert failed" }, { status: 500 })
