@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
@@ -23,12 +24,14 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                size="lg"
-                className="bg-[var(--color-primary-accent)] hover:bg-[var(--color-tertiary-accent)] text-[var(--color-primary)] font-semibold px-8 py-4 text-lg transition-all duration-200 hover:scale-105"
-              >
-                Request Early Access
-              </Button>
+              <Link href="/early-access">
+                <Button
+                  size="lg"
+                  className="bg-[var(--color-primary-accent)] hover:bg-[var(--color-tertiary-accent)] text-[var(--color-primary)] font-semibold px-8 py-4 text-lg transition-all duration-200 hover:scale-105"
+                >
+                  Request Early Access
+                </Button>
+              </Link>
             </div>
           </div>
 
