@@ -29,13 +29,6 @@ export default function HeroSection() {
               >
                 Request Early Access
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-[var(--color-secondary-accent)] text-[var(--color-secondary-accent)] hover:bg-[var(--color-secondary-accent)] hover:text-white px-8 py-4 text-lg transition-all duration-200 bg-transparent"
-              >
-                Learn More
-              </Button>
             </div>
           </div>
 
