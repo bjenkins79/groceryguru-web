@@ -5,7 +5,7 @@ export default function Footer() {
         {/* Links */}
         <div className="flex space-x-8">
           <a
-            href="#"
+            href="mailto:support@getgroceryguru.com"
             className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
           >
             Support
