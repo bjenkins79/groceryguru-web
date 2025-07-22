@@ -1,3 +1,5 @@
+// src/emails/EarlyAccessInvite.tsx
+
 import {
     Html,
     Head,
@@ -12,15 +14,16 @@ import {
   import * as React from "react";
   
   type Props = {
+    name: string;
     email: string;
     testflightUrl: string;
   };
   
-  const EarlyAccessInvite = ({ email, testflightUrl }: Props) => {
+  const EarlyAccessInvite = ({ name, email, testflightUrl }: Props) => {
     return (
       <Html>
         <Head />
-        <Preview>Join GroceryGuru on TestFlight</Preview>
+        <Preview>{name}, your GroceryGuru invite is here</Preview>
   
         <Body
           style={{
@@ -69,7 +72,7 @@ import {
                   textAlign: "center",
                 }}
               >
-                You're invited to test GroceryGuru
+                {name}, your GroceryGuru invite is here
               </Text>
   
               <Text
@@ -91,7 +94,7 @@ import {
                   margin: "16px 0",
                 }}
               >
-                Tap below to install the app via TestFlight. You’ll be redirected to the App Store if needed.
+                To get started, download the TestFlight app if you haven’t already. Then tap below to install GroceryGuru.
               </Text>
   
               <Section style={{ textAlign: "center", margin: "32px 0" }}>
@@ -110,7 +113,7 @@ import {
                     textAlign: "center",
                   }}
                 >
-                  Join TestFlight
+                  Install GroceryGuru
                 </Link>
               </Section>
   
@@ -122,7 +125,7 @@ import {
                   textAlign: "center",
                 }}
               >
-                This is a public link. Access is limited and may close once we reach our tester limit.
+                This is a limited early access link. You’re getting it before launch, and access may close once we hit our tester cap.
               </Text>
             </Section>
   

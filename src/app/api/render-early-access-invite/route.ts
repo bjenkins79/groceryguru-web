@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { email, format } = await req.json();
+  const { email, format, name } = await req.json();
 
   if (!email) {
     return NextResponse.json({ error: "Missing email" }, { status: 400 });
@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
 
   const html = await render(
     React.createElement(EarlyAccessInvite, {
+      name: name || "Friend", // fallback in case name is missing
       email,
       testflightUrl: TESTFLIGHT_PUBLIC_URL,
     }),
