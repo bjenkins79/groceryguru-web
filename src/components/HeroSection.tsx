@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
+import Image from 'next/image'
 
 export default function HeroSection() {
   return (
@@ -42,22 +43,26 @@ export default function HeroSection() {
               <div className="relative z-10">
                 <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                    <img
-                      src="/images/02_ListView.png"
-                      alt="List view"
-                      className="w-full h-full object-cover"
-                    />
+                  <Image
+  src="/images/02_ListView.png"
+  alt="List view"
+  width={288}
+  height={600}
+  className="object-cover w-full h-full"
+/>
                   </div>
                 </div>
               </div>
               <div className="absolute -right-8 top-8 opacity-60">
                 <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-xl opacity-70">
                   <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
-                    <img
-                      src="/images/02_ListView.png"
-                      alt="GroceryGuru Store Filtering"
-                      className="w-full h-full object-cover"
-                    />
+                  <Image
+  src="/images/02_ListView.png"
+  alt="List view"
+  width={288}
+  height={600}
+  className="object-cover w-full h-full"
+/>
                   </div>
                 </div>
               </div>
