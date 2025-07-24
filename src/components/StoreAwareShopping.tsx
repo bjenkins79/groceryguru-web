@@ -39,8 +39,8 @@ export default function StoreAwareShopping() {
               <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                   <img
-                    src="/images/GG_Screenshot_StoreView_StoreItems.png"
-                    alt="Vallarta filtered view"
+                    src="/images/Store_Store_Items_CardExpanded.png"
+                    alt="Target store view"
                     className="w-full h-full object-cover"
                   />
                 </div>

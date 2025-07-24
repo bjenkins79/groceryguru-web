@@ -17,7 +17,7 @@ export default function SimpleCollaboration() {
         <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
         <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
               <img
-                src="/images/GG_Screenshot_Invites.png"
+                src="/images/ManagerUsers_Invite.png"
                 alt="Simple list sharing"
                 className="w-full h-full object-cover"
               />
