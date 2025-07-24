@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function StoreAwareShopping() {
   return (
     <section className="py-20 md:py-28 bg-[var(--color-light-background)] relative">
@@ -38,11 +40,14 @@ export default function StoreAwareShopping() {
             <div className="flex justify-center">
               <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                  <img
-                    src="/images/Store_Store_Items_CardExpanded.png"
-                    alt="Target store view"
-                    className="w-full h-full object-cover"
-                  />
+                <Image
+  src="/images/Store_Store_Items_CardExpanded.png"
+  alt="Target store view"
+  width={288}
+  height={600}
+  className="w-full h-full object-cover"
+  priority
+/>
                 </div>
               </div>
             </div>

@@ -1,3 +1,7 @@
+'use client'
+
+import Image from 'next/image'
+
 export default function SimpleCollaboration() {
   return (
     <section className="py-16 md:py-20 bg-white">
@@ -16,10 +20,13 @@ export default function SimpleCollaboration() {
         <div className="flex justify-center">
         <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
         <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
-              <img
+        <Image
                 src="/images/ManagerUsers_Invite.png"
                 alt="Simple list sharing"
+                width={288}
+                height={600}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
           </div>

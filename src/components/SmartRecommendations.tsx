@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function SmartRecommendations() {
   return (
     <section className="py-20 md:py-32 bg-white relative">
@@ -22,11 +24,14 @@ export default function SmartRecommendations() {
             <div className="relative mx-auto w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl overflow-visible">
               {/* iPhone mockup with annotations */}
               <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
-                <img
-                  src="/images/03_SmartRec_CardView_SmartOrder.png"
-                  alt="Smart Recommendations with confidence scores"
-                  className="w-full h-full object-cover"
-                />
+              <Image
+  src="/images/03_SmartRec_CardView_SmartOrder.png"
+  alt="Smart Recommendations with confidence scores"
+  width={288}
+  height={600}
+  className="w-full h-full object-cover"
+  priority
+/>
               </div>
 
               {/* Annotation callouts */}
