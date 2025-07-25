@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { isTestFlightPhase } from "@/lib/constants";
 
 export async function generateMetadata({ params }: { params: { token: string } }): Promise<Metadata> {
   return {
@@ -47,13 +48,42 @@ export default function InvitePage({ params }: { params: { token: string } }) {
 
         {/* Content */}
         <div className="bg-secondary p-8 rounded-b-2xl shadow-lg">
-          <h2 className="text-2xl font-semibold text-primary mb-4">
-            You've been invited to join!
-          </h2>
+        <h2 className="text-2xl font-semibold text-primary mb-4">
+  Having trouble opening the app?
+</h2>
 
-          <p className="text-primary mb-6">
-            To continue, make sure the app is installed on your iPhone.
-          </p>
+<p className="text-primary mb-6">
+  You were invited to GroceryGuru — but it looks like the app didn’t open automatically. That’s okay!
+</p>
+
+{isTestFlightPhase && (
+  <div className="text-sm text-primary text-center mb-6">
+    <p className="mb-3">
+      GroceryGuru is currently in private beta using Apple’s TestFlight. To join:
+    </p>
+    <ol className="list-decimal list-inside mb-3 space-y-1 text-left inline-block">
+      <li>
+        <a
+          href="https://apps.apple.com/us/app/testflight/id899247664?mt=8"
+          className="underline"
+        >
+          Install TestFlight
+        </a>
+      </li>
+      <li>
+        <a
+          href="itms-beta://testflight.apple.com/join/Km1zWkmS"
+          className="underline"
+        >
+          Download GroceryGuru
+        </a>
+      </li>
+      <li>
+        Return here and tap the “Join Account” button again
+      </li>
+    </ol>
+  </div>
+)}
 
           <div className="bg-light-bg border-2 border-primary-accent rounded-xl p-6 mb-6">
             <h3 className="text-lg font-semibold text-primary mb-4 text-center">

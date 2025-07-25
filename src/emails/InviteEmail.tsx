@@ -12,7 +12,8 @@ import {
     Link,
   } from "@react-email/components";
   import * as React from "react";
-  
+  import { isTestFlightPhase } from "@/lib/constants";
+
   type Props = {
     invite_code: string;
     inviter_name: string;
@@ -119,6 +120,54 @@ import {
                 </Link>
               </Section>
   
+              {isTestFlightPhase && (
+  <>
+    <Text
+      style={{
+        fontSize: "14px",
+        lineHeight: "22px",
+        color: "#6D6D6D",
+        marginBottom: "12px",
+        textAlign: "center",
+      }}
+    >
+      GroceryGuru isn’t on the App Store yet — but <strong>{inviter_name}</strong> wanted to share it with you and get your feedback.
+    </Text>
+
+    <Text
+      style={{
+        fontSize: "14px",
+        lineHeight: "22px",
+        color: "#6D6D6D",
+        marginBottom: "28px",
+        textAlign: "center",
+      }}
+    >
+      To get started:
+      <br />
+      1.{" "}
+      <Link
+        href="https://apps.apple.com/us/app/testflight/id899247664?mt=8"
+        style={{ color: "#293D2E", textDecoration: "underline" }}
+      >
+        Install TestFlight
+      </Link>{" "}
+      (if you haven’t already)
+      <br />
+      2.{" "}
+      <Link
+        href="itms-beta://testflight.apple.com/join/Km1zWkmS"
+        style={{ color: "#293D2E", textDecoration: "underline" }}
+      >
+        Download GroceryGuru
+      </Link>
+      <br />
+      3. Come back to this email and tap your invite link
+    </Text>
+  </>
+)}
+
+
                 <div style={{ textAlign: "center" }}>
     <Text
         style={{
