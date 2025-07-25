@@ -57,11 +57,11 @@ export default function InvitePage({ params }: { params: { token: string } }) {
 </p>
 
 {isTestFlightPhase && (
-  <div className="text-sm text-primary text-center mb-6">
+  <div className="text-primary text-base mb-6">
     <p className="mb-3">
       GroceryGuru is currently in private beta using Apple’s TestFlight. To join:
     </p>
-    <ol className="list-decimal list-inside mb-3 space-y-1 text-left inline-block">
+    <ol className="list-decimal list-inside mb-3 space-y-1">
       <li>
         <a
           href="https://apps.apple.com/us/app/testflight/id899247664?mt=8"
