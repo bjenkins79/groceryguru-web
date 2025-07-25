@@ -11,13 +11,13 @@ export default function Footer() {
             Support
           </a>
           <a
-            href="#"
+            href="/privacy"
             className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
           >
             Privacy
           </a>
           <a
-            href="#"
+            href="/terms"
             className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
           >
             Terms
