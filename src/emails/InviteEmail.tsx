@@ -153,7 +153,7 @@ import {
   )}
 
 {/* Invite Button */}
-<Section style={{ textAlign: "center", marginBottom: "16px" }}>
+<Section style={{ textAlign: "center", marginTop: "24px", marginBottom: "16px" }}>
     <Link
       href={inviteUrl}
       style={{
