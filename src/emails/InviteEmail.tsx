@@ -152,7 +152,8 @@ import {
     </>
   )}
 
-  <Section style={{ textAlign: "center", margin: "32px 0" }}>
+{/* Invite Button */}
+<Section style={{ textAlign: "center", marginBottom: "16px" }}>
     <Link
       href={inviteUrl}
       style={{
@@ -172,7 +173,8 @@ import {
     </Link>
   </Section>
 
-  <Section style={{ textAlign: "center", marginTop: "12px", marginBottom: "0" }}>
+{/* Fallback Code Block */}
+<Section style={{ textAlign: "center", margin: "0" }}>
   <Text
     style={{
       fontSize: "14px",
