@@ -72,7 +72,7 @@ import {
       fontWeight: "600",
       color: "#2A3D2E",
       marginBottom: "16px",
-      textAlign: "left",
+      textAlign: "center",
     }}
   >
     You've been invited to GroceryGuru
@@ -193,9 +193,9 @@ import {
       background: "#FFFFFF",
       border: "2px solid #FFBE72",
       padding: "12px 20px",
-      textAlign: "center",
       display: "inline-block",
       borderRadius: "8px",
+      textAlign: "center",
     }}
   >
     {invite_code}
