@@ -172,7 +172,7 @@ import {
     </Link>
   </Section>
 
-  <Section style={{ textAlign: "center", marginTop: "32px", marginBottom: "0" }}>
+  <Section style={{ textAlign: "center", marginTop: "12px", marginBottom: "0" }}>
   <Text
     style={{
       fontSize: "14px",
