@@ -172,14 +172,13 @@ import {
     </Link>
   </Section>
 
+  <Section style={{ textAlign: "center", marginTop: "32px", marginBottom: "0" }}>
   <Text
     style={{
       fontSize: "14px",
       lineHeight: "22px",
       color: "#2A3D2E",
-      marginTop: "24px",
       marginBottom: "8px",
-      textAlign: "center",
     }}
   >
     Or open the app and enter this code:
@@ -195,11 +194,12 @@ import {
       padding: "12px 20px",
       display: "inline-block",
       borderRadius: "8px",
-      textAlign: "center",
     }}
   >
     {invite_code}
   </Text>
+</Section>
+
 </Section>
 
   
