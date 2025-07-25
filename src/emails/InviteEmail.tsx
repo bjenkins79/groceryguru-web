@@ -66,139 +66,142 @@ import {
   
             {/* Content */}
             <Section style={{ padding: "40px" }}>
-              <Text
-                style={{
-                  fontSize: "24px",
-                  fontWeight: "600",
-                  color: "#2A3D2E", // var(--color-tertiary)
-                  marginBottom: "16px",
-                  textAlign: "center",
-                }}
-              >
-                You've been invited to GroceryGuru
-              </Text>
-  
-              <Text
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  color: "#2A3D2E", // var(--color-tertiary)
-                  margin: "16px 0",
-                }}
-              >
-                <strong>{inviter_name}</strong> invited you to join their GroceryGuru account.
-              </Text>
-  
-              <Text
-                style={{
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  color: "#2A3D2E",
-                  margin: "16px 0",
-                }}
-              >
-                Tap the button below to get started. If the app is not installed, you’ll be directed to the App Store first.
-              </Text>
-  
-              <Section style={{ textAlign: "center", margin: "32px 0" }}>
-                <Link
-                  href={inviteUrl}
-                  style={{
-                    backgroundColor: "#293D2E", // var(--color-primary)
-                    borderRadius: "8px",
-                    color: "#FFFFFF", // var(--color-secondary)
-                    display: "inline-block",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    lineHeight: "20px",
-                    padding: "16px 32px",
-                    textDecoration: "none",
-                    textAlign: "center",
-                  }}
-                >
-                  Accept Invite
-                </Link>
-              </Section>
-  
-              {isTestFlightPhase && (
-  <>
-    <Text
-      style={{
-        fontSize: "14px",
-        lineHeight: "22px",
-        color: "#6D6D6D",
-        marginBottom: "12px",
-        textAlign: "center",
-      }}
-    >
-      GroceryGuru isn’t on the App Store yet — but <strong>{inviter_name}</strong> wanted to share it with you and get your feedback.
-    </Text>
+  <Text
+    style={{
+      fontSize: "24px",
+      fontWeight: "600",
+      color: "#2A3D2E",
+      marginBottom: "16px",
+      textAlign: "left",
+    }}
+  >
+    You've been invited to GroceryGuru
+  </Text>
 
-    <Text
-      style={{
-        fontSize: "14px",
-        lineHeight: "22px",
-        color: "#6D6D6D",
-        marginBottom: "28px",
-        textAlign: "center",
-      }}
-    >
-      To get started:
-      <br />
-      1.{" "}
-      <Link
-        href="https://apps.apple.com/us/app/testflight/id899247664?mt=8"
-        style={{ color: "#293D2E", textDecoration: "underline" }}
-      >
-        Install TestFlight
-      </Link>{" "}
-      (if you haven’t already)
-      <br />
-      2.{" "}
-      <Link
-        href="itms-beta://testflight.apple.com/join/Km1zWkmS"
-        style={{ color: "#293D2E", textDecoration: "underline" }}
-      >
-        Download GroceryGuru
-      </Link>
-      <br />
-      3. Come back to this email and tap your invite link
-    </Text>
-  </>
-)}
-
-
-                <div style={{ textAlign: "center" }}>
-    <Text
+  {isTestFlightPhase ? (
+    <>
+      <Text
         style={{
-        fontSize: "14px",
-        lineHeight: "22px",
-        color: "#2A3D2E",
-        marginTop: "24px",
-        marginBottom: "16px",
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: "#2A3D2E",
+          margin: "16px 0",
+          textAlign: "left",
         }}
-    >
-        Or open the app and enter this code:
-    </Text>
+      >
+        <strong>{inviter_name}</strong> is helping us test GroceryGuru and wanted to share it with you.
+      </Text>
 
-    <Text
+      <Text
         style={{
-        fontSize: "24px",
-        fontWeight: "bold",
-        letterSpacing: "4px",
-        background: "#FFFFFF",
-        border: "2px solid #FFBE72",
-        padding: "12px 20px",
-        textAlign: "center",
-        display: "inline-block",
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: "#2A3D2E",
+          margin: "16px 0",
+          textAlign: "left",
+        }}
+      >
+        GroceryGuru is currently in private beta through Apple’s TestFlight. To get started:
+        <br />
+        <br />
+        1.{" "}
+        <Link
+          href="https://apps.apple.com/us/app/testflight/id899247664?mt=8"
+          style={{ color: "#293D2E", textDecoration: "underline" }}
+        >
+          Install TestFlight
+        </Link>{" "}
+        (if you haven’t already)
+        <br />
+        2.{" "}
+        <Link
+          href="itms-beta://testflight.apple.com/join/Km1zWkmS"
+          style={{ color: "#293D2E", textDecoration: "underline" }}
+        >
+          Download GroceryGuru
+        </Link>
+        <br />
+        3. Return to this email and tap the invite link below
+      </Text>
+    </>
+  ) : (
+    <>
+      <Text
+        style={{
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: "#2A3D2E",
+          margin: "16px 0",
+          textAlign: "left",
+        }}
+      >
+        <strong>{inviter_name}</strong> invited you to join their GroceryGuru account.
+      </Text>
+
+      <Text
+        style={{
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: "#2A3D2E",
+          margin: "16px 0",
+          textAlign: "left",
+        }}
+      >
+        Tap the button below to get started. If the app is not installed, you’ll be directed to the App Store first.
+      </Text>
+    </>
+  )}
+
+  <Section style={{ textAlign: "center", margin: "32px 0" }}>
+    <Link
+      href={inviteUrl}
+      style={{
+        backgroundColor: "#293D2E",
         borderRadius: "8px",
-        }}
+        color: "#FFFFFF",
+        display: "inline-block",
+        fontSize: "16px",
+        fontWeight: "600",
+        lineHeight: "20px",
+        padding: "16px 32px",
+        textDecoration: "none",
+        textAlign: "center",
+      }}
     >
-        {invite_code}
-    </Text>
-    </div>
+      Accept Invite
+    </Link>
+  </Section>
 
-            </Section>
+  <Text
+    style={{
+      fontSize: "14px",
+      lineHeight: "22px",
+      color: "#2A3D2E",
+      marginTop: "24px",
+      marginBottom: "8px",
+      textAlign: "center",
+    }}
+  >
+    Or open the app and enter this code:
+  </Text>
+
+  <Text
+    style={{
+      fontSize: "24px",
+      fontWeight: "bold",
+      letterSpacing: "4px",
+      background: "#FFFFFF",
+      border: "2px solid #FFBE72",
+      padding: "12px 20px",
+      textAlign: "center",
+      display: "inline-block",
+      borderRadius: "8px",
+    }}
+  >
+    {invite_code}
+  </Text>
+</Section>
+
   
             {/* Footer */}
             <Section
