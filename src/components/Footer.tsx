@@ -17,11 +17,13 @@ export default function Footer() {
             Privacy
           </a>
           <a
-            href="/terms"
-            className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
-          >
-            Terms
-          </a>
+  href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
+>
+  Terms
+</a>
         </div>
 
         {/* Copyright */}
