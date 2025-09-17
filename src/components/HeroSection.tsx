@@ -27,13 +27,11 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link href="/early-access">
-                <Button
-                  className="bg-primary-accent hover:bg-tertiary-accent text-primary px-6 py-3 text-lg"
-                >
-                  Request Early Access
-                </Button>
-              </Link>
+              <Button
+                className="bg-primary-accent hover:bg-tertiary-accent text-primary px-6 py-3 text-lg cursor-default"
+              >
+                Coming Soon for iPhone
+              </Button>
             </div>
           </div>
 
@@ -44,8 +42,8 @@ export default function HeroSection() {
                 <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                   <Image
-  src="/images/02_ListView.png"
-  alt="List view"
+  src="/images/HomeScreen_Lists.png"
+  alt="Home screen with multiple lists"
   width={288}
   height={600}
   className="object-cover w-full h-full"
@@ -57,8 +55,8 @@ export default function HeroSection() {
                 <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-xl opacity-70">
                   <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                   <Image
-  src="/images/02_ListView.png"
-  alt="List view"
+  src="/images/HomeScreen_Lists.png"
+  alt="Home screen with multiple lists"
   width={288}
   height={600}
   className="object-cover w-full h-full"

@@ -2,7 +2,7 @@ import Header from "../components/Header"
 import HeroSection from "../components/HeroSection"
 import SmartRecommendations from "../components/SmartRecommendations"
 import StoreAwareShopping from "../components/StoreAwareShopping"
-import SimpleCollaboration from "../components/SimpleCollaboration"
+import SmartSearch from "../components/SmartSearch"
 import Footer from "../components/Footer"
 
 export const metadata = {
@@ -33,8 +33,8 @@ export default function LandingPage() {
       <Header />
       <HeroSection />
       <SmartRecommendations />
+      <SmartSearch />
       <StoreAwareShopping />
-      <SimpleCollaboration />
       <Footer />
     </>
   )

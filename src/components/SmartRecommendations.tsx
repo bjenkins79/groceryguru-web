@@ -18,7 +18,7 @@ export default function SmartRecommendations() {
         </div>
 
         {/* Main content - asymmetrical layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left - Large annotated screenshot */}
           <div className="lg:col-span-7 order-2 lg:order-1">
             <div className="relative mx-auto w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl overflow-visible">
