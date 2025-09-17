@@ -17,10 +17,10 @@ export default function StoreAwareShopping() {
         </div>
 
         {/* Main content - asymmetrical layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Large annotated screenshot */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
-            <div className="relative mx-auto w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl overflow-visible">
+          <div className="order-2 lg:order-1 flex justify-center lg:justify-end">
+            <div className="relative w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl overflow-visible">
               <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
                 <Image
                   src="/images/StoreView_ExpCategory.png"
@@ -35,8 +35,8 @@ export default function StoreAwareShopping() {
           </div>
 
           {/* Right - Feature details */}
-          <div className="lg:col-span-5 order-1 lg:order-2">
-            <div className="space-y-10">
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-start">
+            <div className="space-y-10 max-w-sm">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-[var(--color-secondary-accent)] rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-base">1</span>

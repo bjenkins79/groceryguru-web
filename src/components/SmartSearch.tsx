@@ -17,9 +17,9 @@ export default function SmartSearch() {
         </div>
 
         {/* Main content - asymmetrical layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Feature details */}
-          <div className="lg:col-span-5 order-1 lg:order-1">
+          <div className="order-1 lg:order-1 flex justify-center lg:justify-end">
             <div className="space-y-10">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-[var(--color-primary-accent)] rounded-full flex items-center justify-center">
@@ -38,7 +38,7 @@ export default function SmartSearch() {
           </div>
 
           {/* Right - Large annotated screenshot */}
-          <div className="lg:col-span-7 order-2 lg:order-2">
+          <div className="order-2 lg:order-2 flex justify-center lg:justify-start">
             <div className="relative mx-auto w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl overflow-visible">
               <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
                 <Image
