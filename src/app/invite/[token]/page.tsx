@@ -53,37 +53,8 @@ export default function InvitePage({ params }: { params: { token: string } }) {
 </h2>
 
 <p className="text-primary mb-6">
-  You were invited to GroceryGuru — but it looks like the app didn’t open automatically. That’s okay!
+  You were invited to GroceryGuru — but it looks like the app didn't open automatically.
 </p>
-
-{isTestFlightPhase && (
-  <div className="text-primary text-base mb-6">
-    <p className="mb-3">
-      GroceryGuru is currently in private beta using Apple’s TestFlight. To join:
-    </p>
-    <ol className="list-decimal list-inside mb-3 space-y-1">
-      <li>
-        <a
-          href="https://apps.apple.com/us/app/testflight/id899247664?mt=8"
-          className="underline"
-        >
-          Install TestFlight
-        </a>
-      </li>
-      <li>
-        <a
-          href="itms-beta://testflight.apple.com/join/Km1zWkmS"
-          className="underline"
-        >
-          Download GroceryGuru
-        </a>
-      </li>
-      <li>
-        Return here and tap the “Join Account” button again
-      </li>
-    </ol>
-  </div>
-)}
 
           <div className="bg-light-bg border-2 border-primary-accent rounded-xl p-6 mb-6">
             <h3 className="text-lg font-semibold text-primary mb-4 text-center">
@@ -92,7 +63,7 @@ export default function InvitePage({ params }: { params: { token: string } }) {
 
             <div className="mb-6">
               <p className="text-primary font-medium mb-3">
-                Option 1: Tap the button below
+                Option 1: Already have the app? Tap below:
               </p>
               <a
                 href={joinUrl}
@@ -102,9 +73,31 @@ export default function InvitePage({ params }: { params: { token: string } }) {
               </a>
             </div>
 
-            <div>
+            <div className="mb-6">
               <p className="text-primary font-medium mb-3">
-                Option 2: Enter this invite code in the app
+                Option 2: Don't have the app? Download it first:
+              </p>
+              <a
+                href="https://apple.co/3Wgh4UY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center"
+              >
+                <img
+                  src="/images/Download_on_the_App_Store_Badge.png"
+                  alt="Download on the App Store"
+                  className="mx-auto"
+                  style={{ width: "160px", height: "auto" }}
+                />
+              </a>
+              <p className="text-primary text-sm mt-3 text-center">
+                Then return and tap "Join Account" above
+              </p>
+            </div>
+
+            <div>
+              <p className="text-primary font-medium mb-3 text-center">
+                If you're having trouble, enter this code in the app:
               </p>
               <div className="bg-secondary border-2 border-primary rounded-lg p-4 text-center">
                 <span className="text-2xl font-bold text-primary tracking-widest">
@@ -114,9 +107,6 @@ export default function InvitePage({ params }: { params: { token: string } }) {
             </div>
           </div>
 
-          <p className="text-sm text-primary opacity-80 text-center">
-            If this screen doesn't open in the app, return to your iPhone and try again.
-          </p>
         </div>
       </div> 
     </div>

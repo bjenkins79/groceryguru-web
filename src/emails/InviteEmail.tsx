@@ -51,7 +51,7 @@ import {
             <Section
               style={{
                 backgroundColor: "#FFBE72", // var(--color-primary-accent)
-                padding: "32px 40px",
+                padding: "32px 40px 40px 40px",
                 textAlign: "center",
               }}
             >
@@ -65,19 +65,7 @@ import {
             </Section>
   
             {/* Content */}
-            <Section style={{ padding: "40px" }}>
-  <Text
-    style={{
-      fontSize: "24px",
-      fontWeight: "600",
-      color: "#2A3D2E",
-      marginBottom: "16px",
-      textAlign: "center",
-    }}
-  >
-    You've been invited to GroceryGuru
-  </Text>
-
+            <Section style={{ padding: "48px 40px 56px 40px" }}>
   {isTestFlightPhase ? (
     <>
       <Text
@@ -128,14 +116,14 @@ import {
     <>
       <Text
         style={{
-          fontSize: "16px",
-          lineHeight: "24px",
+          fontSize: "28px",
+          fontWeight: "700",
           color: "#2A3D2E",
-          margin: "16px 0",
-          textAlign: "left",
+          margin: "8px 0 24px 0",
+          textAlign: "center",
         }}
       >
-        <strong>{inviter_name}</strong> invited you to join their GroceryGuru account.
+        You've been invited!
       </Text>
 
       <Text
@@ -143,64 +131,93 @@ import {
           fontSize: "16px",
           lineHeight: "24px",
           color: "#2A3D2E",
-          margin: "16px 0",
-          textAlign: "left",
+          margin: "0 0 32px 0",
+          textAlign: "center",
         }}
       >
-        Tap the button below to get started. If the app is not installed, you’ll be directed to the App Store first.
+        <strong>{inviter_name}</strong> invited you to join their GroceryGuru account.
       </Text>
+
+      {/* Accept Invite Button */}
+      <Section style={{ textAlign: "center", marginTop: "0", marginBottom: "40px" }}>
+        <Link
+          href={inviteUrl}
+          style={{
+            backgroundColor: "#293D2E",
+            borderRadius: "8px",
+            color: "#FFFFFF",
+            display: "inline-block",
+            fontSize: "16px",
+            fontWeight: "600",
+            lineHeight: "20px",
+            padding: "16px 32px",
+            textDecoration: "none",
+            textAlign: "center",
+          }}
+        >
+          Accept Invite
+        </Link>
+      </Section>
+
+      {/* Don't have the app section */}
+      <Text
+        style={{
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: "#2A3D2E",
+          margin: "0 0 20px 0",
+          textAlign: "center",
+        }}
+      >
+        New to GroceryGuru?
+      </Text>
+
+      {/* App Store Badge */}
+      <Section style={{ textAlign: "center", marginBottom: "32px" }}>
+        <Link href="https://apple.co/3Wgh4UY">
+          <Img
+            src="https://links.getgroceryguru.com/images/Download_on_the_App_Store_Badge.png"
+            alt="Download on the App Store"
+            width="160"
+            height="53"
+            style={{ display: "inline-block" }}
+          />
+        </Link>
+      </Section>
+
+      {/* Instructions */}
+      <Text
+        style={{
+          fontSize: "16px",
+          lineHeight: "24px",
+          color: "#2A3D2E",
+          margin: "0 auto 16px auto",
+          textAlign: "center",
+          maxWidth: "480px",
+        }}
+      >
+        After downloading, tap 'Accept Invite' above or enter this code in the app:
+      </Text>
+
+      {/* Invite Code */}
+      <Section style={{ textAlign: "center", marginTop: "0" }}>
+        <Text
+          style={{
+            fontSize: "24px",
+            fontWeight: "bold",
+            letterSpacing: "4px",
+            background: "#FFF8F0",
+            border: "2px solid #FFBE72",
+            padding: "12px 20px",
+            display: "inline-block",
+            borderRadius: "8px",
+          }}
+        >
+          {invite_code}
+        </Text>
+      </Section>
     </>
   )}
-
-{/* Invite Button */}
-<Section style={{ textAlign: "center", marginTop: "24px", marginBottom: "16px" }}>
-    <Link
-      href={inviteUrl}
-      style={{
-        backgroundColor: "#293D2E",
-        borderRadius: "8px",
-        color: "#FFFFFF",
-        display: "inline-block",
-        fontSize: "16px",
-        fontWeight: "600",
-        lineHeight: "20px",
-        padding: "16px 32px",
-        textDecoration: "none",
-        textAlign: "center",
-      }}
-    >
-      Accept Invite
-    </Link>
-  </Section>
-
-{/* Fallback Code Block */}
-<Section style={{ textAlign: "center", margin: "0" }}>
-  <Text
-    style={{
-      fontSize: "14px",
-      lineHeight: "22px",
-      color: "#2A3D2E",
-      marginBottom: "8px",
-    }}
-  >
-    Or open the app and enter this code:
-  </Text>
-
-  <Text
-    style={{
-      fontSize: "24px",
-      fontWeight: "bold",
-      letterSpacing: "4px",
-      background: "#FFFFFF",
-      border: "2px solid #FFBE72",
-      padding: "12px 20px",
-      display: "inline-block",
-      borderRadius: "8px",
-    }}
-  >
-    {invite_code}
-  </Text>
-</Section>
 
 </Section>
 
