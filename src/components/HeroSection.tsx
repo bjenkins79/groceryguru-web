@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 
 export default function HeroSection() {
@@ -27,11 +26,20 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                className="bg-primary-accent hover:bg-tertiary-accent text-primary px-6 py-3 text-lg cursor-default"
+              <Link
+                href="https://apple.co/3Wgh4UY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
               >
-                Coming Soon for iPhone
-              </Button>
+                <Image
+                  src="/images/Download_on_the_App_Store_Badge.png"
+                  alt="Download on the App Store"
+                  width={180}
+                  height={60}
+                  className="h-[60px] w-auto hover:opacity-90 transition-opacity"
+                />
+              </Link>
             </div>
           </div>
 
