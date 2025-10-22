@@ -42,7 +42,7 @@ export default function SmartSearch() {
             <div className="relative mx-auto w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl overflow-visible">
               <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
                 <Image
-                  src="/images/SmartSearch_InList.png"
+                  src="/images/Search_SmartResults_Juice.png"
                   alt="Smart search showing contextual results"
                   width={288}
                   height={600}

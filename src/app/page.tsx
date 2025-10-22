@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection"
 import SmartRecommendations from "../components/SmartRecommendations"
 import StoreAwareShopping from "../components/StoreAwareShopping"
 import SmartSearch from "../components/SmartSearch"
+import AskGroceryGuru from "../components/AskGroceryGuru"
 import Footer from "../components/Footer"
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default function LandingPage() {
       <HeroSection />
       <SmartRecommendations />
       <SmartSearch />
+      <AskGroceryGuru />
       <StoreAwareShopping />
       <Footer />
     </>

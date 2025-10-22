@@ -50,7 +50,7 @@ export default function HeroSection() {
                 <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                   <Image
-  src="/images/HomeScreen_Lists.png"
+  src="/images/ListView.png"
   alt="Home screen with multiple lists"
   width={288}
   height={600}
@@ -63,7 +63,7 @@ export default function HeroSection() {
                 <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-xl opacity-70">
                   <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden">
                   <Image
-  src="/images/HomeScreen_Lists.png"
+  src="/images/ListView.png"
   alt="Home screen with multiple lists"
   width={288}
   height={600}

@@ -25,7 +25,7 @@ export default function SmartRecommendations() {
               {/* iPhone mockup with annotations */}
               <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
               <Image
-  src="/images/03_SmartRec_CardView_SmartOrder.png"
+  src="/images/SmartRec_Eggs.png"
   alt="Smart Recommendations with confidence scores"
   width={288}
   height={600}
