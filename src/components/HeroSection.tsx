@@ -27,7 +27,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
-                href="https://apple.co/3Wgh4UY"
+                href="https://apps.apple.com/us/app/groceryguru-grocery-assistant/id6744698978"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"

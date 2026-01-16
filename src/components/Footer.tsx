@@ -1,29 +1,31 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-light-background)] border-t border-[var(--color-primary)] border-opacity-10 py-8">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center space-y-4">
         {/* Links */}
         <div className="flex space-x-8">
-          <a
+          <Link
             href="/support"
             className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
           >
             Support
-          </a>
-          <a
+          </Link>
+          <Link
             href="/privacy"
             className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
           >
             Privacy
-          </a>
+          </Link>
           <a
-  href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
->
-  Terms
-</a>
+            href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-primary)] opacity-70 hover:opacity-100 transition-opacity text-base font-medium"
+          >
+            Terms
+          </a>
         </div>
 
         {/* Copyright */}
