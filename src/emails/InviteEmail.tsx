@@ -238,7 +238,7 @@ import {
                   margin: "0",
                 }}
               >
-                © 2025 GroceryGuru. Smart lists made simple.
+                © 2026 GroceryGuru. Smart lists made simple.
               </Text>
             </Section>
           </Container>
