@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# iCloud-skipped local build dir (see next.config.mjs)
+.next.nosync/
