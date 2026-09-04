@@ -86,14 +86,14 @@ export default function Header({
               className="gg-logo-light"
               src="/images/Logo_GroceryGuru.svg"
               alt="GroceryGuru"
-              style={{ height: "clamp(36px,3.4vw,44px)", width: "auto", display: "block" }}
+              style={{ height: "clamp(36px,3.4vw,44px)", width: "auto" }}
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="gg-logo-dark"
               src="/images/Logo_GroceryGuru_White.svg"
               alt="GroceryGuru"
-              style={{ height: "clamp(36px,3.4vw,44px)", width: "auto", display: "block" }}
+              style={{ height: "clamp(36px,3.4vw,44px)", width: "auto" }}
             />
           </span>
           {links.map((l) => (

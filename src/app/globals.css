@@ -78,12 +78,20 @@
 .font-bebas    { font-family: var(--font-bebas), Impact, sans-serif; letter-spacing: 0.02em; }
 .font-hanken   { font-family: var(--font-hanken), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 
-/* CSS-only logo theme swap (no JS, no hydration flash) */
-.gg-logo-dark { display: none; }
+/* CSS-only logo theme swap (no JS, no hydration flash).
+   Display is controlled HERE, never inline, or an inline display would win. */
+.gg-logo-light { display: block; }
+.gg-logo-dark  { display: none; }
 @media (prefers-color-scheme: dark) {
   .gg-logo-light { display: none; }
   .gg-logo-dark  { display: block; }
 }
+
+/* Section-04 copy pin is a desktop affordance; drop it once the grid is a single
+   column, or the pinned copy overlaps the scrolling list card (mobile). This is a
+   behavior guard, not a layout breakpoint (clamp + auto-fit still do the layout). */
+.gg-sticky-copy { position: sticky; top: clamp(96px,10vh,132px); }
+@media (max-width: 640px) { .gg-sticky-copy { position: static; } }
 
 body {
   background-color: var(--color-light-background);

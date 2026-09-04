@@ -111,13 +111,12 @@ export default function StoreAwareShopping() {
         }}
       >
         <div
+          className="gg-sticky-copy"
           style={{
             display: "flex",
             flexDirection: "column",
             gap: 12,
             maxWidth: "32ch",
-            position: "sticky",
-            top: "clamp(96px,10vh,132px)",
           }}
         >
           <span className="font-bebas" style={eyebrow}>
