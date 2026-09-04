@@ -1,3 +1,5 @@
+import Footer from "../../components/Footer";
+
 const APP_STORE =
   "https://apps.apple.com/us/app/groceryguru-grocery-assistant/id6744698978";
 
@@ -85,7 +87,7 @@ const GROUPS: Group[] = [
       {
         q: "Can my family or friends use the same lists?",
         a: [
-          "Yes, on Premium. You can invite up to three other people from account settings, and everyone shares the same lists and sees the same recommendations, synced.",
+          "Yes, on Premium. You can invite up to four other people from account settings, and everyone shares the same lists and sees the same recommendations, synced.",
         ],
       },
       {
@@ -272,42 +274,7 @@ export default function FaqPage() {
         ))}
       </div>
 
-      {/* Forest close (FAQ variant, with support line) */}
-      <section style={{ background: "var(--forest)", color: "var(--cream)", padding: "clamp(34px,5vw,80px) clamp(22px,5vw,64px)" }}>
-        <div style={{ maxWidth: 1240, margin: "0 auto", display: "flex", flexDirection: "column", gap: "clamp(24px,3vw,36px)" }}>
-          <p style={{ margin: 0, fontSize: 17, lineHeight: 1.45, color: "rgba(var(--cream-rgb),0.9)" }}>
-            Still stuck?{" "}
-            <a href="mailto:support@getgroceryguru.com" style={{ color: "var(--cream)", textDecoration: "underline" }}>
-              Email support
-            </a>{" "}
-            and we will get back to you.
-          </p>
-          <h2
-            className="font-playfair"
-            style={{ fontWeight: 600, fontSize: "clamp(36px,4.6vw,64px)", lineHeight: 1.02, margin: 0 }}
-          >
-            Keep Shopping Smart.
-          </h2>
-          <a href={APP_STORE} style={{ display: "inline-flex", alignSelf: "flex-start" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/Download_on_the_App_Store_Badge.png" alt="Download on the App Store" style={{ height: 50, display: "block" }} />
-          </a>
-          <div style={{ height: 1, background: "rgba(var(--cream-rgb),0.18)" }} />
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "16px clamp(22px,3vw,40px)", alignItems: "center" }}>
-            <a href="/" style={{ flex: "1 1 200px", display: "flex" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/Logo_GroceryGuru_White.svg" alt="GroceryGuru" style={{ height: "clamp(42px,3.6vw,50px)", width: "auto", display: "block" }} />
-            </a>
-            <a href="/plans" style={{ fontSize: 15, fontWeight: 600, color: "var(--cream)" }}>
-              Plans
-            </a>
-            <a href="/privacy" style={{ fontSize: 15, fontWeight: 600, color: "var(--cream)" }}>
-              Privacy
-            </a>
-            <span style={{ fontSize: 14, color: "rgba(var(--cream-rgb),0.85)" }}>Shop smarter</span>
-          </div>
-        </div>
-      </section>
+      <Footer supportLine />
     </div>
   );
 }

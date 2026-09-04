@@ -1,10 +1,11 @@
 const APP_STORE =
   "https://apps.apple.com/us/app/groceryguru-grocery-assistant/id6744698978";
+// Apple's standard EULA (App Store requirement when there's no custom terms page).
+const TERMS = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/";
 
-// Forest close + footer. Shared by all pages. White logo lockup.
-// NOTE (deviation vs old footer): the mockup drops the Terms/EULA link + copyright
-// line the previous footer had. Flagged for Ben; re-add if legally wanted.
-export default function Footer() {
+// Forest close + footer. Shared by ALL pages. White logo lockup.
+// `supportLine` adds the FAQ page's "Still stuck? Email support" line at the top.
+export default function Footer({ supportLine = false }: { supportLine?: boolean }) {
   return (
     <section
       style={{
@@ -21,6 +22,15 @@ export default function Footer() {
           gap: "clamp(26px,3vw,40px)",
         }}
       >
+        {supportLine && (
+          <p style={{ margin: 0, fontSize: 17, lineHeight: 1.45, color: "rgba(var(--cream-rgb),0.9)" }}>
+            Still stuck?{" "}
+            <a href="mailto:support@getgroceryguru.com" style={{ color: "var(--cream)", textDecoration: "underline" }}>
+              Email support
+            </a>{" "}
+            and we will get back to you.
+          </p>
+        )}
         <div
           style={{
             display: "grid",
@@ -77,6 +87,9 @@ export default function Footer() {
           <a href="/privacy" style={{ fontSize: 15, fontWeight: 600, color: "var(--cream)" }}>
             Privacy
           </a>
+          <a href={TERMS} target="_blank" rel="noopener noreferrer" style={{ fontSize: 15, fontWeight: 600, color: "var(--cream)" }}>
+            Terms
+          </a>
           <a
             href="mailto:support@getgroceryguru.com"
             style={{ fontSize: 15, fontWeight: 600, color: "var(--cream)" }}
@@ -84,6 +97,9 @@ export default function Footer() {
             Support
           </a>
           <span style={{ fontSize: 14, color: "rgba(var(--cream-rgb),0.85)" }}>Shop smarter</span>
+        </div>
+        <div style={{ fontSize: 13, color: "rgba(var(--cream-rgb),0.7)" }}>
+          © {new Date().getFullYear()} GroceryGuru. All rights reserved.
         </div>
       </div>
     </section>

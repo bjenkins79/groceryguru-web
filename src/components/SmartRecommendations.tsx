@@ -153,7 +153,9 @@ function StatsCard({ s }: { s: Stage }) {
       >
         {value}
       </span>
-      <span style={{ fontSize: 11.5, color: "rgba(var(--ink-rgb),0.62)" }}>{label}</span>
+      {/* 0.75 not the mockup's 0.62: at 0.62 these 11.5px labels are 3.82:1 on the dark card,
+          under AA. 0.75 clears it (4.75:1) and is visually near-identical. */}
+      <span style={{ fontSize: 11.5, color: "rgba(var(--ink-rgb),0.75)" }}>{label}</span>
     </span>
   );
   return (

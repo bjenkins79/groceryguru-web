@@ -53,7 +53,7 @@ export default function SmartSearch() {
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: "34ch" }}>
           <span className="font-bebas" style={eyebrow}>
-            01 · SEARCH
+            01 · FIND IT
           </span>
           <h2
             className="font-playfair"

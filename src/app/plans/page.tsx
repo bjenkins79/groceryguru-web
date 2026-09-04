@@ -227,7 +227,7 @@ export default function PlansPage() {
               </div>
 
               <ValueRow name="Items it recommends" premium="ALL" free="TOP 3" freeSmall first />
-              <ValueRow name="People on the account" premium="4" free="1" />
+              <ValueRow name="People on the account" premium="5" free="1" />
               <ValueRow name="Lists" premium="NO LIMIT" free="2" premiumSmall />
               <ValueRow name="Questions for Ask" premium="NO LIMIT" free="5" premiumSmall />
               <BoolRow name="Recommendations while you search" free="dash" />
