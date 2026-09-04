@@ -54,6 +54,9 @@
   --hairline:rgba(0,0,0,0);
   --ink-rgb:42,61,46;      --cream-rgb:244,241,232;  --teal-rgb:107,163,162;
   --amber-rgb:227,162,58;  --glass-rgb:250,251,249;  --tealink-rgb:52,101,95;
+  /* REUSE-CHECKED: --white-rgb is part of the handoff THEME (both palettes = 255,255,255),
+     used for the glass-bar hairline + the PRIMARY badge alpha; no existing token carries it. */
+  --white-rgb:255,255,255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,6 +77,13 @@
 .font-playfair { font-family: var(--font-playfair), Georgia, serif; }
 .font-bebas    { font-family: var(--font-bebas), Impact, sans-serif; letter-spacing: 0.02em; }
 .font-hanken   { font-family: var(--font-hanken), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+/* CSS-only logo theme swap (no JS, no hydration flash) */
+.gg-logo-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  .gg-logo-light { display: none; }
+  .gg-logo-dark  { display: block; }
+}
 
 body {
   background-color: var(--color-light-background);
