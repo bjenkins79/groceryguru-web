@@ -2,18 +2,31 @@
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// Bebas Neue — eyebrows, app-UI titles, chapter labels (single weight)
+const bebas = localFont({
+  src: "./fonts/BebasNeue-Regular.ttf",
+  variable: "--font-bebas",
+  weight: "400",
+  display: "swap",
 });
 
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+// Hanken Grotesk — body + app-UI text (variable, use 400/600/800 only)
+const hanken = localFont({
+  src: "./fonts/HankenGrotesk-VariableFont_wght.ttf",
+  variable: "--font-hanken",
+  weight: "400 800",
+  display: "swap",
+});
+
+// Playfair Display — editorial headings (web-only addition), 600 only
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600"],
+  variable: "--font-playfair",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bebas.variable} ${hanken.variable} ${playfair.variable} antialiased`}
       >
         {children}
       </body>
