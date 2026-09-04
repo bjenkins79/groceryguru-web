@@ -96,7 +96,6 @@ export default function Footer({ supportLine = false }: { supportLine?: boolean 
           >
             Support
           </a>
-          <span style={{ fontSize: 14, color: "rgba(var(--cream-rgb),0.85)" }}>Shop smarter</span>
         </div>
         <div style={{ fontSize: 13, color: "rgba(var(--cream-rgb),0.7)" }}>
           © {new Date().getFullYear()} GroceryGuru. All rights reserved.
